@@ -1,0 +1,7 @@
+FROM balenalib/amd64-python:latest
+
+RUN install_packages python3-requests
+
+COPY app.py app.py
+
+CMD bash -c "python3 app.py; sleep infinity"
